@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAPI Scorer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .upload-section, .url-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        input[type="file"], input[type="url"] {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 300px;
+        }
+        
+        button {
+            background: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        
+        button:hover {
+            background: #0056b3;
+        }
+        
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .results {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .score-display {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .score-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #28a745;
+        }
+        
+        .reports {
+            margin-top: 20px;
+        }
+        
+        .report-item {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .report-item:hover {
+            background: #0056b3;
+        }
+        
+        .error {
+            color: #dc3545;
+            background: #f8d7da;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 OpenAPI Scorer</h1>
+        
+        <div class="upload-section">
+            <h3>Upload OpenAPI File</h3>
+            <input type="file" id="fileInput" accept=".json,.yaml,.yml">
+            <br>
+            <button onclick="uploadFile()">Score File</button>
+        </div>
+        
+        <div class="url-section">
+            <h3>Score from URL</h3>
+            <input type="url" id="urlInput" placeholder="https://api.example.com/openapi.json">
+            <br>
+            <button onclick="scoreUrl()">Score URL</button>
+        </div>
+        
+        <div class="loading" id="loading">
+            <h3>⏳ Analyzing your API...</h3>
+        </div>
+        
+        <div class="error" id="error"></div>
+        
+        <div class="results" id="results">
+            <div class="score-display">
+                <div class="score-number" id="score">-</div>
+                <div>Score</div>
+            </div>
+            
+            <h4>API: <span id="apiTitle">-</span></h4>
+            
+            <div class="reports" id="reports">
+                <h4>Download Reports:</h4>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin + '/api';
+        
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('error').style.display = 'none';
+        }
+        
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+        }
+        
+        function showError(message) {
+            hideLoading();
+            document.getElementById('error').textContent = message;
+            document.getElementById('error').style.display = 'block';
+        }
+        
+        function showResults(data) {
+            hideLoading();
+            document.getElementById('error').style.display = 'none';
+            
+            document.getElementById('score').textContent = data.score.overallScore;
+            document.getElementById('apiTitle').textContent = data.apiTitle;
+            
+            const reportsDiv = document.getElementById('reports');
+            reportsDiv.innerHTML = '<h4>Download Reports:</h4>';
+            
+            data.reports.forEach(report => {
+                const link = document.createElement('a');
+                link.href = window.location.origin + report.url;
+                link.textContent = report.format.toUpperCase() + ' Report';
+                link.className = 'report-item';
+                link.target = '_blank';
+                reportsDiv.appendChild(link);
+            });
+            
+            document.getElementById('results').style.display = 'block';
+        }
+        
+        async function uploadFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            
+            if (!file) {
+                showError('Please select a file');
+                return;
+            }
+            
+            showLoading();
+            
+            const formData = new FormData();
+            formData.append('spec', file);
+            formData.append('format', 'all');
+            
+            try {
+                const response = await fetch(API_BASE + '/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showResults(data);
+                } else {
+                    showError(data.error || 'Upload failed');
+                }
+            } catch (error) {
+                showError('Upload failed: ' + error.message);
+            }
+        }
+        
+        async function scoreUrl() {
+            const urlInput = document.getElementById('urlInput');
+            const url = urlInput.value.trim();
+            
+            if (!url) {
+                showError('Please enter a URL');
+                return;
+            }
+            
+            showLoading();
+            
+            try {
+                const response = await fetch(API_BASE + '/score-url', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        url: url,
+                        format: 'all'
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showResults(data);
+                } else {
+                    showError(data.error || 'URL scoring failed');
+                }
+            } catch (error) {
+                showError('URL scoring failed: ' + error.message);
+            }
+        }
+        
+        const uploadSection = document.querySelector('.upload-section');
+        
+        uploadSection.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadSection.style.borderColor = '#007bff';
+        });
+        
+        uploadSection.addEventListener('dragleave', () => {
+            uploadSection.style.borderColor = '#ddd';
+        });
+        
+        uploadSection.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadSection.style.borderColor = '#ddd';
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                document.getElementById('fileInput').files = files;
+            }
+        });
+    </script>
+</body>
+</html>

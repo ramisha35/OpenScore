@@ -1,0 +1,1051 @@
+{
+  "metadata": {
+    "timestamp": "2025-06-01T19:54:47.983Z",
+    "apiTitle": "Swagger Petstore",
+    "generator": "Theneo OpenAPI Scorer",
+    "version": "1.0.0"
+  },
+  "summary": {
+    "overallScore": 12,
+    "grade": "F",
+    "gradeDescription": "Poor",
+    "totalIssues": 103,
+    "issueBreakdown": {
+      "criticalIssues": 0,
+      "highIssues": 32,
+      "mediumIssues": 33,
+      "lowIssues": 38
+    }
+  },
+  "analysis": {
+    "criterionResults": [
+      {
+        "criterion": "Schema & Types",
+        "score": 0,
+        "maxScore": 20,
+        "percentage": 0,
+        "weight": 0.2,
+        "weightedScore": 0,
+        "issueCount": 18,
+        "issues": [
+          {
+            "path": "/pet/{petId}/uploadImage",
+            "operation": "post",
+            "location": "parameters[0]",
+            "description": "Parameter \"petId\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/pet/{petId}/uploadImage",
+            "operation": "post",
+            "location": "parameters[1]",
+            "description": "Parameter \"additionalMetadata\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/pet/{petId}/uploadImage",
+            "operation": "post",
+            "location": "parameters[2]",
+            "description": "Parameter \"file\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/pet/findByStatus",
+            "operation": "get",
+            "location": "parameters[0]",
+            "description": "Parameter \"status\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/pet/findByTags",
+            "operation": "get",
+            "location": "parameters[0]",
+            "description": "Parameter \"tags\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "get",
+            "location": "parameters[0]",
+            "description": "Parameter \"petId\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "post",
+            "location": "parameters[0]",
+            "description": "Parameter \"petId\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "post",
+            "location": "parameters[1]",
+            "description": "Parameter \"name\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "post",
+            "location": "parameters[2]",
+            "description": "Parameter \"status\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "delete",
+            "location": "parameters[0]",
+            "description": "Parameter \"api_key\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "delete",
+            "location": "parameters[1]",
+            "description": "Parameter \"petId\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/store/order/{orderId}",
+            "operation": "get",
+            "location": "parameters[0]",
+            "description": "Parameter \"orderId\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/store/order/{orderId}",
+            "operation": "delete",
+            "location": "parameters[0]",
+            "description": "Parameter \"orderId\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/user/{username}",
+            "operation": "get",
+            "location": "parameters[0]",
+            "description": "Parameter \"username\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/user/{username}",
+            "operation": "put",
+            "location": "parameters[0]",
+            "description": "Parameter \"username\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/user/{username}",
+            "operation": "delete",
+            "location": "parameters[0]",
+            "description": "Parameter \"username\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/user/login",
+            "operation": "get",
+            "location": "parameters[0]",
+            "description": "Parameter \"username\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          },
+          {
+            "path": "/user/login",
+            "operation": "get",
+            "location": "parameters[1]",
+            "description": "Parameter \"password\" has neither schema nor content defined",
+            "severity": "high",
+            "suggestion": "Define either a schema or content for the parameter",
+            "criterion": "Schema & Types"
+          }
+        ]
+      },
+      {
+        "criterion": "Descriptions & Documentation",
+        "score": 0,
+        "maxScore": 20,
+        "percentage": 0,
+        "weight": 0.2,
+        "weightedScore": 0,
+        "issueCount": 12,
+        "issues": [
+          {
+            "path": "/pet/{petId}/uploadImage",
+            "operation": "post",
+            "location": "description",
+            "description": "Operation POST /pet/{petId}/uploadImage has no description",
+            "severity": "medium",
+            "suggestion": "Add a detailed description explaining what the operation does, expected behavior, and side effects",
+            "criterion": "Descriptions & Documentation"
+          },
+          {
+            "path": "/pet",
+            "operation": "post",
+            "location": "description",
+            "description": "Operation POST /pet has no description",
+            "severity": "medium",
+            "suggestion": "Add a detailed description explaining what the operation does, expected behavior, and side effects",
+            "criterion": "Descriptions & Documentation"
+          },
+          {
+            "path": "/pet",
+            "operation": "put",
+            "location": "description",
+            "description": "Operation PUT /pet has no description",
+            "severity": "medium",
+            "suggestion": "Add a detailed description explaining what the operation does, expected behavior, and side effects",
+            "criterion": "Descriptions & Documentation"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "post",
+            "location": "description",
+            "description": "Operation POST /pet/{petId} has no description",
+            "severity": "medium",
+            "suggestion": "Add a detailed description explaining what the operation does, expected behavior, and side effects",
+            "criterion": "Descriptions & Documentation"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "delete",
+            "location": "description",
+            "description": "Operation DELETE /pet/{petId} has no description",
+            "severity": "medium",
+            "suggestion": "Add a detailed description explaining what the operation does, expected behavior, and side effects",
+            "criterion": "Descriptions & Documentation"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "delete",
+            "location": "parameters[0] (api_key in header)",
+            "description": "Parameter \"api_key\" has no description",
+            "severity": "medium",
+            "suggestion": "Add a clear description explaining the parameter purpose, constraints, and format",
+            "criterion": "Descriptions & Documentation"
+          },
+          {
+            "path": "/store/order",
+            "operation": "post",
+            "location": "description",
+            "description": "Operation POST /store/order has no description",
+            "severity": "medium",
+            "suggestion": "Add a detailed description explaining what the operation does, expected behavior, and side effects",
+            "criterion": "Descriptions & Documentation"
+          },
+          {
+            "path": "/user/createWithList",
+            "operation": "post",
+            "location": "description",
+            "description": "Operation POST /user/createWithList has no description",
+            "severity": "medium",
+            "suggestion": "Add a detailed description explaining what the operation does, expected behavior, and side effects",
+            "criterion": "Descriptions & Documentation"
+          },
+          {
+            "path": "/user/{username}",
+            "operation": "get",
+            "location": "description",
+            "description": "Operation GET /user/{username} has no description",
+            "severity": "medium",
+            "suggestion": "Add a detailed description explaining what the operation does, expected behavior, and side effects",
+            "criterion": "Descriptions & Documentation"
+          },
+          {
+            "path": "/user/login",
+            "operation": "get",
+            "location": "description",
+            "description": "Operation GET /user/login has no description",
+            "severity": "medium",
+            "suggestion": "Add a detailed description explaining what the operation does, expected behavior, and side effects",
+            "criterion": "Descriptions & Documentation"
+          },
+          {
+            "path": "/user/logout",
+            "operation": "get",
+            "location": "description",
+            "description": "Operation GET /user/logout has no description",
+            "severity": "medium",
+            "suggestion": "Add a detailed description explaining what the operation does, expected behavior, and side effects",
+            "criterion": "Descriptions & Documentation"
+          },
+          {
+            "path": "/user/createWithArray",
+            "operation": "post",
+            "location": "description",
+            "description": "Operation POST /user/createWithArray has no description",
+            "severity": "medium",
+            "suggestion": "Add a detailed description explaining what the operation does, expected behavior, and side effects",
+            "criterion": "Descriptions & Documentation"
+          }
+        ]
+      },
+      {
+        "criterion": "Paths & Operations",
+        "score": 1,
+        "maxScore": 15,
+        "percentage": 7,
+        "weight": 0.15,
+        "weightedScore": 1,
+        "issueCount": 13,
+        "issues": [
+          {
+            "path": "/pet/{petId}/uploadImage",
+            "location": "uploadImage",
+            "description": "Path segment \"uploadImage\" does not follow kebab-case naming convention",
+            "severity": "low",
+            "suggestion": "Use kebab-case (lowercase with hyphens) for path segments",
+            "criterion": "Paths & Operations"
+          },
+          {
+            "path": "/pet/findByStatus",
+            "location": "findByStatus",
+            "description": "Path segment \"findByStatus\" does not follow kebab-case naming convention",
+            "severity": "low",
+            "suggestion": "Use kebab-case (lowercase with hyphens) for path segments",
+            "criterion": "Paths & Operations"
+          },
+          {
+            "path": "/pet/findByTags",
+            "location": "findByTags",
+            "description": "Path segment \"findByTags\" does not follow kebab-case naming convention",
+            "severity": "low",
+            "suggestion": "Use kebab-case (lowercase with hyphens) for path segments",
+            "criterion": "Paths & Operations"
+          },
+          {
+            "path": "/user/createWithList",
+            "location": "createWithList",
+            "description": "Path segment \"createWithList\" does not follow kebab-case naming convention",
+            "severity": "low",
+            "suggestion": "Use kebab-case (lowercase with hyphens) for path segments",
+            "criterion": "Paths & Operations"
+          },
+          {
+            "path": "/user/createWithArray",
+            "location": "createWithArray",
+            "description": "Path segment \"createWithArray\" does not follow kebab-case naming convention",
+            "severity": "low",
+            "suggestion": "Use kebab-case (lowercase with hyphens) for path segments",
+            "criterion": "Paths & Operations"
+          },
+          {
+            "path": "/pet",
+            "operation": "put",
+            "location": "",
+            "description": "Using PUT on a collection resource",
+            "severity": "medium",
+            "suggestion": "PUT/PATCH should typically be used on individual resources, not collections",
+            "criterion": "Paths & Operations"
+          },
+          {
+            "path": "/pet/{petId}/uploadImage",
+            "operation": "post",
+            "location": "operationId",
+            "description": "OperationId \"uploadFile\" does not indicate the HTTP method (POST)",
+            "severity": "low",
+            "suggestion": "Consider prefixing operationId with create/, /add/, /post/, /insert to indicate the operation type",
+            "criterion": "Paths & Operations"
+          },
+          {
+            "path": "/pet/findByStatus",
+            "operation": "get",
+            "location": "operationId",
+            "description": "OperationId \"findPetsByStatus\" does not indicate the HTTP method (GET)",
+            "severity": "low",
+            "suggestion": "Consider prefixing operationId with get/, /read/, /fetch/, /list/, /retrieve to indicate the operation type",
+            "criterion": "Paths & Operations"
+          },
+          {
+            "path": "/pet/findByTags",
+            "operation": "get",
+            "location": "operationId",
+            "description": "OperationId \"findPetsByTags\" does not indicate the HTTP method (GET)",
+            "severity": "low",
+            "suggestion": "Consider prefixing operationId with get/, /read/, /fetch/, /list/, /retrieve to indicate the operation type",
+            "criterion": "Paths & Operations"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "post",
+            "location": "operationId",
+            "description": "OperationId \"updatePetWithForm\" does not indicate the HTTP method (POST)",
+            "severity": "low",
+            "suggestion": "Consider prefixing operationId with create/, /add/, /post/, /insert to indicate the operation type",
+            "criterion": "Paths & Operations"
+          },
+          {
+            "path": "/store/order",
+            "operation": "post",
+            "location": "operationId",
+            "description": "OperationId \"placeOrder\" does not indicate the HTTP method (POST)",
+            "severity": "low",
+            "suggestion": "Consider prefixing operationId with create/, /add/, /post/, /insert to indicate the operation type",
+            "criterion": "Paths & Operations"
+          },
+          {
+            "path": "/user/login",
+            "operation": "get",
+            "location": "operationId",
+            "description": "OperationId \"loginUser\" does not indicate the HTTP method (GET)",
+            "severity": "low",
+            "suggestion": "Consider prefixing operationId with get/, /read/, /fetch/, /list/, /retrieve to indicate the operation type",
+            "criterion": "Paths & Operations"
+          },
+          {
+            "path": "/user/logout",
+            "operation": "get",
+            "location": "operationId",
+            "description": "OperationId \"logoutUser\" does not indicate the HTTP method (GET)",
+            "severity": "low",
+            "suggestion": "Consider prefixing operationId with get/, /read/, /fetch/, /list/, /retrieve to indicate the operation type",
+            "criterion": "Paths & Operations"
+          }
+        ]
+      },
+      {
+        "criterion": "Response Codes",
+        "score": 0,
+        "maxScore": 15,
+        "percentage": 0,
+        "weight": 0.15,
+        "weightedScore": 0,
+        "issueCount": 40,
+        "issues": [
+          {
+            "path": "/pet/{petId}/uploadImage",
+            "operation": "post",
+            "location": "responses",
+            "description": "Operation is missing client error response codes (4xx)",
+            "severity": "medium",
+            "suggestion": "Add appropriate client error response codes (e.g., 400, 401, 404)",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet/{petId}/uploadImage",
+            "operation": "post",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet/{petId}/uploadImage",
+            "operation": "post",
+            "location": "responses",
+            "description": "POST operation for resource creation should return 201 Created",
+            "severity": "medium",
+            "suggestion": "Add a 201 Created response for resource creation operations",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet",
+            "operation": "post",
+            "location": "responses",
+            "description": "Operation is missing success response codes (2xx)",
+            "severity": "high",
+            "suggestion": "Add appropriate success response codes (e.g., 200, 201, 204)",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet",
+            "operation": "post",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet",
+            "operation": "post",
+            "location": "responses",
+            "description": "POST operation for resource creation should return 201 Created",
+            "severity": "medium",
+            "suggestion": "Add a 201 Created response for resource creation operations",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet",
+            "operation": "put",
+            "location": "responses",
+            "description": "Operation is missing success response codes (2xx)",
+            "severity": "high",
+            "suggestion": "Add appropriate success response codes (e.g., 200, 201, 204)",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet",
+            "operation": "put",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet",
+            "operation": "put",
+            "location": "responses",
+            "description": "PUT operation should return 200 OK or 204 No Content",
+            "severity": "medium",
+            "suggestion": "Add appropriate success response code (200 or 204) based on whether content is returned",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet/findByStatus",
+            "operation": "get",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet/findByTags",
+            "operation": "get",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "get",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "post",
+            "location": "responses",
+            "description": "Operation is missing success response codes (2xx)",
+            "severity": "high",
+            "suggestion": "Add appropriate success response codes (e.g., 200, 201, 204)",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "post",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "delete",
+            "location": "responses",
+            "description": "Operation is missing success response codes (2xx)",
+            "severity": "high",
+            "suggestion": "Add appropriate success response codes (e.g., 200, 201, 204)",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "delete",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/pet/{petId}",
+            "operation": "delete",
+            "location": "responses",
+            "description": "DELETE operation should typically return 204 No Content",
+            "severity": "low",
+            "suggestion": "Consider using 204 No Content for DELETE operations",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/store/inventory",
+            "operation": "get",
+            "location": "responses",
+            "description": "Operation is missing client error response codes (4xx)",
+            "severity": "medium",
+            "suggestion": "Add appropriate client error response codes (e.g., 400, 401, 404)",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/store/inventory",
+            "operation": "get",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/store/order",
+            "operation": "post",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/store/order",
+            "operation": "post",
+            "location": "responses",
+            "description": "POST operation for resource creation should return 201 Created",
+            "severity": "medium",
+            "suggestion": "Add a 201 Created response for resource creation operations",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/store/order/{orderId}",
+            "operation": "get",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/store/order/{orderId}",
+            "operation": "delete",
+            "location": "responses",
+            "description": "Operation is missing success response codes (2xx)",
+            "severity": "high",
+            "suggestion": "Add appropriate success response codes (e.g., 200, 201, 204)",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/store/order/{orderId}",
+            "operation": "delete",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/store/order/{orderId}",
+            "operation": "delete",
+            "location": "responses",
+            "description": "DELETE operation should typically return 204 No Content",
+            "severity": "low",
+            "suggestion": "Consider using 204 No Content for DELETE operations",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/user/createWithList",
+            "operation": "post",
+            "location": "responses",
+            "description": "Operation is missing client error response codes (4xx)",
+            "severity": "medium",
+            "suggestion": "Add appropriate client error response codes (e.g., 400, 401, 404)",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/user/createWithList",
+            "operation": "post",
+            "location": "responses",
+            "description": "POST operation for resource creation should return 201 Created",
+            "severity": "medium",
+            "suggestion": "Add a 201 Created response for resource creation operations",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/user/{username}",
+            "operation": "get",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/user/{username}",
+            "operation": "put",
+            "location": "responses",
+            "description": "Operation is missing success response codes (2xx)",
+            "severity": "high",
+            "suggestion": "Add appropriate success response codes (e.g., 200, 201, 204)",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/user/{username}",
+            "operation": "put",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/user/{username}",
+            "operation": "put",
+            "location": "responses",
+            "description": "PUT operation should return 200 OK or 204 No Content",
+            "severity": "medium",
+            "suggestion": "Add appropriate success response code (200 or 204) based on whether content is returned",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/user/{username}",
+            "operation": "delete",
+            "location": "responses",
+            "description": "Operation is missing success response codes (2xx)",
+            "severity": "high",
+            "suggestion": "Add appropriate success response codes (e.g., 200, 201, 204)",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/user/{username}",
+            "operation": "delete",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/user/{username}",
+            "operation": "delete",
+            "location": "responses",
+            "description": "DELETE operation should typically return 204 No Content",
+            "severity": "low",
+            "suggestion": "Consider using 204 No Content for DELETE operations",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/user/login",
+            "operation": "get",
+            "location": "responses",
+            "description": "Operation is missing server error handling (5xx or default)",
+            "severity": "low",
+            "suggestion": "Add server error responses (5xx) or a default response",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/user/logout",
+            "operation": "get",
+            "location": "responses",
+            "description": "Operation is missing client error response codes (4xx)",
+            "severity": "medium",
+            "suggestion": "Add appropriate client error response codes (e.g., 400, 401, 404)",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/user/createWithArray",
+            "operation": "post",
+            "location": "responses",
+            "description": "Operation is missing client error response codes (4xx)",
+            "severity": "medium",
+            "suggestion": "Add appropriate client error response codes (e.g., 400, 401, 404)",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/user/createWithArray",
+            "operation": "post",
+            "location": "responses",
+            "description": "POST operation for resource creation should return 201 Created",
+            "severity": "medium",
+            "suggestion": "Add a 201 Created response for resource creation operations",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/user",
+            "operation": "post",
+            "location": "responses",
+            "description": "Operation is missing client error response codes (4xx)",
+            "severity": "medium",
+            "suggestion": "Add appropriate client error response codes (e.g., 400, 401, 404)",
+            "criterion": "Response Codes"
+          },
+          {
+            "path": "/user",
+            "operation": "post",
+            "location": "responses",
+            "description": "POST operation for resource creation should return 201 Created",
+            "severity": "medium",
+            "suggestion": "Add a 201 Created response for resource creation operations",
+            "criterion": "Response Codes"
+          }
+        ]
+      },
+      {
+        "criterion": "Examples & Samples",
+        "score": 3,
+        "maxScore": 10,
+        "percentage": 30,
+        "weight": 0.1,
+        "weightedScore": 3,
+        "issueCount": 7,
+        "issues": [
+          {
+            "path": "/pet",
+            "operation": "post",
+            "location": "parameters.body",
+            "description": "Required parameter \"body\" (in body) lacks examples",
+            "severity": "low",
+            "suggestion": "Add an example to help consumers understand expected parameter values",
+            "criterion": "Examples & Samples"
+          },
+          {
+            "path": "/pet",
+            "operation": "put",
+            "location": "parameters.body",
+            "description": "Required parameter \"body\" (in body) lacks examples",
+            "severity": "low",
+            "suggestion": "Add an example to help consumers understand expected parameter values",
+            "criterion": "Examples & Samples"
+          },
+          {
+            "path": "/store/order",
+            "operation": "post",
+            "location": "parameters.body",
+            "description": "Required parameter \"body\" (in body) lacks examples",
+            "severity": "low",
+            "suggestion": "Add an example to help consumers understand expected parameter values",
+            "criterion": "Examples & Samples"
+          },
+          {
+            "path": "/user/createWithList",
+            "operation": "post",
+            "location": "parameters.body",
+            "description": "Required parameter \"body\" (in body) lacks examples",
+            "severity": "low",
+            "suggestion": "Add an example to help consumers understand expected parameter values",
+            "criterion": "Examples & Samples"
+          },
+          {
+            "path": "/user/{username}",
+            "operation": "put",
+            "location": "parameters.body",
+            "description": "Required parameter \"body\" (in body) lacks examples",
+            "severity": "low",
+            "suggestion": "Add an example to help consumers understand expected parameter values",
+            "criterion": "Examples & Samples"
+          },
+          {
+            "path": "/user/createWithArray",
+            "operation": "post",
+            "location": "parameters.body",
+            "description": "Required parameter \"body\" (in body) lacks examples",
+            "severity": "low",
+            "suggestion": "Add an example to help consumers understand expected parameter values",
+            "criterion": "Examples & Samples"
+          },
+          {
+            "path": "/user",
+            "operation": "post",
+            "location": "parameters.body",
+            "description": "Required parameter \"body\" (in body) lacks examples",
+            "severity": "low",
+            "suggestion": "Add an example to help consumers understand expected parameter values",
+            "criterion": "Examples & Samples"
+          }
+        ]
+      },
+      {
+        "criterion": "Security",
+        "score": 0,
+        "maxScore": 10,
+        "percentage": 0,
+        "weight": 0.1,
+        "weightedScore": 0,
+        "issueCount": 12,
+        "issues": [
+          {
+            "path": "root",
+            "location": "security",
+            "description": "No global security requirements defined",
+            "severity": "medium",
+            "suggestion": "Define global security requirements to ensure all endpoints are secured by default",
+            "criterion": "Security"
+          },
+          {
+            "path": "/store/order",
+            "operation": "post",
+            "location": "security",
+            "description": "POST operation has no security requirements",
+            "severity": "high",
+            "suggestion": "Add security requirements for write operations",
+            "criterion": "Security"
+          },
+          {
+            "path": "/store/order/{orderId}",
+            "operation": "get",
+            "location": "security",
+            "description": "GET operation has no security requirements",
+            "severity": "medium",
+            "suggestion": "Consider adding security requirements",
+            "criterion": "Security"
+          },
+          {
+            "path": "/store/order/{orderId}",
+            "operation": "delete",
+            "location": "security",
+            "description": "DELETE operation has no security requirements",
+            "severity": "high",
+            "suggestion": "Add security requirements for write operations",
+            "criterion": "Security"
+          },
+          {
+            "path": "/user/createWithList",
+            "operation": "post",
+            "location": "security",
+            "description": "POST operation has no security requirements",
+            "severity": "high",
+            "suggestion": "Add security requirements for write operations",
+            "criterion": "Security"
+          },
+          {
+            "path": "/user/{username}",
+            "operation": "get",
+            "location": "security",
+            "description": "GET operation has no security requirements",
+            "severity": "medium",
+            "suggestion": "Consider adding security requirements",
+            "criterion": "Security"
+          },
+          {
+            "path": "/user/{username}",
+            "operation": "put",
+            "location": "security",
+            "description": "PUT operation has no security requirements",
+            "severity": "high",
+            "suggestion": "Add security requirements for write operations",
+            "criterion": "Security"
+          },
+          {
+            "path": "/user/{username}",
+            "operation": "delete",
+            "location": "security",
+            "description": "DELETE operation has no security requirements",
+            "severity": "high",
+            "suggestion": "Add security requirements for write operations",
+            "criterion": "Security"
+          },
+          {
+            "path": "/user/login",
+            "operation": "get",
+            "location": "security",
+            "description": "GET operation has no security requirements",
+            "severity": "medium",
+            "suggestion": "Consider adding security requirements",
+            "criterion": "Security"
+          },
+          {
+            "path": "/user/logout",
+            "operation": "get",
+            "location": "security",
+            "description": "GET operation has no security requirements",
+            "severity": "medium",
+            "suggestion": "Consider adding security requirements",
+            "criterion": "Security"
+          },
+          {
+            "path": "/user/createWithArray",
+            "operation": "post",
+            "location": "security",
+            "description": "POST operation has no security requirements",
+            "severity": "high",
+            "suggestion": "Add security requirements for write operations",
+            "criterion": "Security"
+          },
+          {
+            "path": "/user",
+            "operation": "post",
+            "location": "security",
+            "description": "POST operation has no security requirements",
+            "severity": "high",
+            "suggestion": "Add security requirements for write operations",
+            "criterion": "Security"
+          }
+        ]
+      },
+      {
+        "criterion": "Miscellaneous Best Practices",
+        "score": 8,
+        "maxScore": 10,
+        "percentage": 80,
+        "weight": 0.1,
+        "weightedScore": 8.000000000000002,
+        "issueCount": 1,
+        "issues": [
+          {
+            "path": "root",
+            "location": "servers",
+            "description": "No servers defined in the API",
+            "severity": "medium",
+            "suggestion": "Add at least one server URL to help consumers understand where the API is deployed",
+            "criterion": "Miscellaneous Best Practices"
+          }
+        ]
+      }
+    ]
+  },
+  "statistics": {
+    "criteriaCount": 7,
+    "passedCriteria": 1,
+    "averageScore": 17,
+    "worstPerformingCriterion": {
+      "criterion": "Schema & Types",
+      "score": 0,
+      "maxScore": 20,
+      "percentage": 0,
+      "issueCount": 18
+    },
+    "bestPerformingCriterion": {
+      "criterion": "Miscellaneous Best Practices",
+      "score": 8,
+      "maxScore": 10,
+      "percentage": 80,
+      "issueCount": 1
+    }
+  },
+  "recommendations": [
+    "Critical: Overall score is below 60. Immediate action required to improve API quality.",
+    "Resolve 32 high-priority issue(s) soon.",
+    "Focus on improving \"Schema & Types\" - currently at 0%.",
+    "Focus on improving \"Descriptions & Documentation\" - currently at 0%.",
+    "Focus on improving \"Paths & Operations\" - currently at 7%.",
+    "Focus on improving \"Response Codes\" - currently at 0%.",
+    "Focus on improving \"Examples & Samples\" - currently at 30%.",
+    "Focus on improving \"Security\" - currently at 0%.",
+    "Consider establishing API documentation standards to prevent future issues."
+  ]
+}
