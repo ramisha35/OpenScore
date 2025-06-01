@@ -1,9 +1,9 @@
 import SwaggerParser from '@apidevtools/swagger-parser';
-import { OpenAPI } from 'openapi-types';
+import { OpenAPIV3 } from 'openapi-types';
 import { errorFormatter } from './errorFormater';
 
 export class OpenAPIInputHandler {
-  async handleInput(input: string): Promise<OpenAPI.Document> {
+  async handleInput(input: string): Promise<OpenAPIV3.Document> {
     if (!input || input.trim().length === 0) {
       throw new Error('Input cannot be empty');
     }
@@ -17,7 +17,7 @@ export class OpenAPIInputHandler {
       console.log(`Version: ${api.info.version}`);
       console.log(`Endpoints: ${Object.keys(api.paths || {}).length}`);
 
-      return api as OpenAPI.Document;
+      return api as OpenAPIV3.Document;
     } catch (error: any) {
       throw errorFormatter.format(error, input);
     }
