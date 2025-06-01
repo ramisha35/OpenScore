@@ -5,3 +5,4 @@ export { responseCodesAnalyzer } from './responseCodesAnalyzer';
 export { examplesAndSamplesAnalyzer } from './examplesAndSamplesAnalyzer';
 export { securityAnalyzer } from './securityAnalyzer';
 export { miscellaneousBestPracticesAnalyzer } from './miscellaneousBestPracticesAnalyzer';
+export { baseAnalyzer } from './baseAnalyzer';
