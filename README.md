@@ -177,6 +177,8 @@ npm run test:watch   # Tests in watch mode
 
 Sample Output
 When you analyze a spec (like the Swagger Petstore), you get comprehensive JSON output:
+<pre>
+```json
 {
   "metadata": {
     "timestamp": "2025-06-02T10:09:29.794Z",
@@ -284,6 +286,7 @@ When you analyze a spec (like the Swagger Petstore), you get comprehensive JSON 
     "Focus on improving 'Security' - currently at 0%."
   ]
 }
+</pre>
 
 Each issue tells you exactly where the problem is and how to fix it.
 
@@ -302,3 +305,8 @@ The reporting system supports multiple output formats through a plugin-like arch
 ---
 
 Built for the Theneo 2025 Internship Challenge
+
+
+
+
+
