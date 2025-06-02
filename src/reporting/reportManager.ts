@@ -53,9 +53,7 @@ export class reportManager {
     return exportedFiles;
   }
 
-  /**
-   * Generate report content without saving to file
-   */
+
   generateReport(
     result: scoringResult,
     format: 'json' | 'markdown' | 'html',
