@@ -1,5 +1,5 @@
 {
-  "name": "openscore",
+ "name": "openscore",
   "version": "1.0.0",
   "description": "Simple OpenAPI Scorer",
   "main": "dist/server/index.js",
@@ -7,9 +7,14 @@
     "build": "tsc",
     "start": "node dist/server/index.js",
     "dev": "nodemon --watch src --exec ts-node src/server/index.ts",
+    "dev:console": "ts-node src/index.ts",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage --watchAll=false"
+    "test:coverage": "jest --coverage --watchAll=false",
+    "test:integration": "jest src/tests/integration/scoring.test.ts",
+    "test:unit": "jest src/tests/unit/analyzer.test.ts",
+    "test:integration:watch": "jest src/tests/integration/scoring.test.ts --watch",
+    "test:unit:watch": "jest src/tests/unit/analyzer.test.ts --watch"
   },
   "repository": {
     "type": "git",
